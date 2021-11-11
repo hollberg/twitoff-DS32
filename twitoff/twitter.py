@@ -3,8 +3,8 @@
 from os import getenv
 import tweepy
 import spacy
-import dotenv
 from .models import DB, Tweet, User
+import dotenv
 
 
 # Get API keys from .env
@@ -23,7 +23,7 @@ nlp = spacy.load('my_model/')
 def vectorize_tweet(tweet_text):
     return nlp(tweet_text).vector
 
-# function to query the API for a user 
+# function to query the API for a user
 # and add the user to the DB.
 def add_or_update_user(username):
     """
@@ -47,7 +47,7 @@ def add_or_update_user(username):
             since_id=db_user.newest_tweet_id
         )
 
-        # check to see if the newest tweet in the DB is equal to the newest tweet from the Twitter API, if they're not equal then that means that the user has posted new tweets that we should add to our DB. 
+        # check to see if the newest tweet in the DB is equal to the newest tweet from the Twitter API, if they're not equal then that means that the user has posted new tweets that we should add to our DB.
         if tweets:
             db_user.newest_tweet_id = tweets[0].id
 
@@ -78,5 +78,6 @@ def get_all_usernames():
     Users = User.query.all()
     for user in Users:
         usernames.append(user.username)
-    
+
     return usernames
+
