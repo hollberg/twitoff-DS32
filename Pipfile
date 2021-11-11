@@ -5,11 +5,13 @@ name = "pypi"
 
 [packages]
 flask = "*"
+jinja2 = "*"
+flask-sqlalchemy = "*"
+tweepy = "*"
 spacy = "*"
+python-dotenv = "*"
 scikit-learn = "*"
 gunicorn = "*"
-psycopg2 = "*"
-flask-sqlalchemy = "*"
 
 [dev-packages]
 
