@@ -9,7 +9,7 @@ spacy = "*"
 scikit-learn = "*"
 gunicorn = "*"
 psycopg2 = "*"
-flask_sqlalchemy = "*"
+flask-sqlalchemy = "*"
 
 [dev-packages]
 
