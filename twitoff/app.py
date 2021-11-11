@@ -25,7 +25,7 @@ def create_app():
 
     @app.route('/update')
     def update():
-        '''update all users'''
+        """update all users"""
         usernames = get_all_usernames()
         for username in usernames:
             add_or_update_user(username)
